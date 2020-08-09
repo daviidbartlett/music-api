@@ -1,5 +1,5 @@
 module.exports = [
-  { playlist: 'Coffee Shop' },
-  { playlist: 'Running' },
-  { playlist: '80s' },
+  { name: 'Coffee Shop' },
+  { name: 'Running' },
+  { name: '80s' },
 ];

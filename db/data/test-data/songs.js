@@ -37,7 +37,7 @@ module.exports = [
     genre: ['genre-b', 'genre-c'],
     lyrics: 'song-e lyrics',
     release_date: 2004,
-    playlist: 'playlist-c',
+    playlist: 'playlist-b',
   },
   {
     title: 'song-f',
@@ -45,6 +45,6 @@ module.exports = [
     genre: ['genre-b'],
     lyrics: 'song-f lyrics',
     release_date: 2002,
-    playlist: 'playlist-c',
+    playlist: 'playlist-b',
   },
 ];

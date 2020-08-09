@@ -1,1 +1,1 @@
-module.exports = [{ playlist: 'playlist-a' }, { playlist: 'playlist-b' }];
+module.exports = [{ name: 'playlist-a' }, { name: 'playlist-b' }];
