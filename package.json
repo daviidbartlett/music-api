@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "setup-dbs": "psql -f db/setup.sql",
+    "migrate-rollback": "knex migrate:rollback",
+    "migrate-latest": "knex migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
