@@ -1,0 +1,16 @@
+module.exports = [
+  { name: 'S Club', genre: '' },
+  { name: 'Heather Small', genre: '' },
+  { name: 'Taylor Swift', genre: '' },
+  { name: 'Talk Talk', genre: '' },
+  { name: 'Steve Nicks', genre: '' },
+  { name: 'Blondie', genre: '' },
+  { name: 'Spandau Ballet', genre: '' },
+  { name: 'The Postal Service', genre: '' },
+  { name: 'The National', genre: '' },
+  { name: 'Bon Iver', genre: '' },
+  { name: 'Linnea Henriksson', genre: '' },
+  { name: 'Whitney Houston', genre: '' },
+  { name: 'Tina Turner', genre: '' },
+  { name: 'Donny Osmond', genre: '' },
+];
