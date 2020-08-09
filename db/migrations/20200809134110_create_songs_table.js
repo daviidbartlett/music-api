@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.string('title').notNullable;
     table.string('artist').references('artists.name').notNullable();
     table.text('lyrics');
-    table.integer('release_data');
+    table.integer('release_date');
     table.string('playlist').references('playlists.name');
   });
 };

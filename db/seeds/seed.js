@@ -1,4 +1,8 @@
 const { songs, artists, genres, playlists } = require('../data');
+const {
+  formatSongGenreData,
+  formatArtistGenreData,
+} = require('../../utils/seed');
 
 exports.seed = function (knex) {
   return knex.migrate
@@ -19,5 +23,19 @@ exports.seed = function (knex) {
         artistInsertions,
       ]);
     })
-    .then(() => {});
+    .then(() => {
+      const songsToInsert = songs.map(({ genres, ...rest }) => ({
+        ...rest,
+      }));
+      return knex('songs').insert(songsToInsert);
+    })
+    .then(() => {
+      const songGenreInsertions = knex('songs_genres').insert(
+        formatSongGenreData(songs)
+      );
+      const artistGenreInsertions = knex('artists_genres').insert(
+        formatArtistGenreData(artists)
+      );
+      return Promise.all([songGenreInsertions, artistGenreInsertions]);
+    });
 };

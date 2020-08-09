@@ -2,7 +2,7 @@ module.exports = [
   {
     title: 'song-a',
     artist: 'artist-a',
-    genre: ['genre-a'],
+    genres: ['genre-a'],
     lyrics: 'song-a lyrics',
     release_date: 2000,
     playlist: 'playlist-a',
@@ -10,7 +10,7 @@ module.exports = [
   {
     title: 'song-b',
     artist: 'artist-a',
-    genre: ['genre-b'],
+    genres: ['genre-b'],
     lyrics: 'song-b lyrics',
     release_date: 2001,
     playlist: 'playlist-a',
@@ -18,7 +18,7 @@ module.exports = [
   {
     title: 'song-c',
     artist: 'artist-b',
-    genre: ['genre-a', 'genre-b'],
+    genres: ['genre-a', 'genre-b'],
     lyrics: 'song-c lyrics',
     release_date: 2003,
     playlist: 'playlist-b',
@@ -26,7 +26,7 @@ module.exports = [
   {
     title: 'song-d',
     artist: 'artist-c',
-    genre: ['genre-c'],
+    genres: ['genre-c'],
     lyrics: 'song-d lyrics',
     release_date: 2002,
     playlist: 'playlist-a',
@@ -34,7 +34,7 @@ module.exports = [
   {
     title: 'song-e',
     artist: 'artist-d',
-    genre: ['genre-b', 'genre-c'],
+    genres: ['genre-b', 'genre-c'],
     lyrics: 'song-e lyrics',
     release_date: 2004,
     playlist: 'playlist-b',
@@ -42,7 +42,7 @@ module.exports = [
   {
     title: 'song-f',
     artist: 'artist-a',
-    genre: ['genre-b'],
+    genres: ['genre-b'],
     lyrics: 'song-f lyrics',
     release_date: 2002,
     playlist: 'playlist-b',

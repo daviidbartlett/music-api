@@ -7,9 +7,9 @@ module.exports = [
   { name: 'Taylor Swift', genres: ['Pop', 'Country', 'Indie Folk'] },
   {
     name: 'Talk Talk',
-    genres: ['Synth Pop', 'Electro Pop', 'New Wave', 'Post-rock'],
+    genres: ['Synth Pop', 'Electro Pop', 'New Wave', 'Post Rock'],
   },
-  { name: 'Steve Nicks', genres: ['Rock'] },
+  { name: 'Stevie Nicks', genres: ['Rock'] },
   { name: 'Blondie', genres: ['Pop Rock', 'New Wave', 'Punk Rock'] },
   { name: 'Spandau Ballet', genres: ['Synth Pop', 'New Wave'] },
   { name: 'The Postal Service', genres: ['Indie Rock', 'Indie Pop'] },
