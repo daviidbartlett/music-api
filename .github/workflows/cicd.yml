@@ -1,7 +1,9 @@
 name: CICD
 
 on:
-  pull_request: gi
+  pull_request:
+    branches:
+      - 'master'
   push:
     branches:
       - '**'
