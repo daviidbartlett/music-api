@@ -5,7 +5,7 @@ const baseConfig = {
   seeds: { directory: './db/seeds' },
   migrations: { directory: './db/migrations' },
 };
-
+console.log(DB_USER);
 const customConfig = {
   test: {
     connection: {

@@ -24,6 +24,7 @@ exports.seed = function (knex) {
       ]);
     })
     .then(() => {
+      // eslint-disable-next-line no-unused-vars
       const songsToInsert = songs.map(({ genres, ...rest }) => ({
         ...rest,
       }));

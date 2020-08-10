@@ -8,7 +8,7 @@ exports.formatSongGenreData = (data) => {
 
 exports.formatArtistGenreData = (data) => {
   return data
-    .map(({ name, genres }, index) => {
+    .map(({ name, genres }) => {
       return genres.map((genre) => ({ artist: name, genre }));
     })
     .flat();

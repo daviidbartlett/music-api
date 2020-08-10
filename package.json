@@ -4,6 +4,7 @@
   "description": "An API designed to serve up data on what I am listening to right now.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "setup-dbs": "psql -f db/setup.sql",
     "migrate-rollback": "knex migrate:rollback",
     "migrate-latest": "knex migrate:latest",
@@ -19,6 +20,8 @@
     "pg": "^8.3.0"
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-jest": "^23.20.0",
     "jest": "^26.2.2",
     "supertest": "^4.0.2"
   }

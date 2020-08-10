@@ -1,0 +1,57 @@
+name: CICD
+
+on:
+  pull_request:
+    branches: - master
+  push:
+    branches:
+      - '**'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install deps
+        run: npm install
+      - name: Run Linting
+        run: npm run lint
+
+  tests:
+    name: Running Tests
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+
+    env:
+      DB_USER: test
+      DB_PASSWORD: test
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use nodejs ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Setup PostgreSQL
+        uses: harmon758/postgresql-action@v1.0.0
+        with:
+          postgresql version: 12
+          postgresql db: music_test
+          postgresql user: test
+          postgresql password: test
+
+      - run: npm ci
+      - run: npm run test

@@ -16,7 +16,6 @@ describe('Query All Songs', () => {
         }
     }`,
       });
-
     expect(status).toBe(200);
     expect(body.data.songs.length).toBe(6);
     expect(body.data.songs[0]).toEqual(
@@ -31,17 +30,13 @@ describe('Query All Songs', () => {
     );
   });
   it('song has genre prop which is array of genre stings', async () => {
-    const { status, body } = await request('http://localhost:4000')
-      .post('/')
-      .send({
-        query: `query {
+    const { body } = await request('http://localhost:4000').post('/').send({
+      query: `query {
         songs {
-            title
           genres
         }
     }`,
-      });
-    console.log(body.data.songs);
+    });
     expect(body.data.songs[0]).toEqual(
       expect.objectContaining({
         genres: expect.arrayContaining([expect.any(String)]),
