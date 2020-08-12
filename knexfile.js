@@ -1,11 +1,15 @@
-const { NODE_ENV = 'development', DB_USER, DB_PASSWORD } = process.env;
+const {
+  NODE_ENV = 'development',
+  DB_USER,
+  DB_PASSWORD,
+  DB_HOST = 'localhost',
+} = process.env;
 
 const baseConfig = {
   client: 'pg',
   seeds: { directory: './db/seeds' },
   migrations: { directory: './db/migrations' },
 };
-console.log(DB_USER);
 const customConfig = {
   test: {
     connection: {
@@ -16,7 +20,7 @@ const customConfig = {
   },
   development: {
     connection: {
-      host: 'localhost',
+      host: DB_HOST,
       database: 'music',
       user: DB_USER,
       password: DB_PASSWORD,

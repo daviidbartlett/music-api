@@ -9,7 +9,9 @@
     "migrate-rollback": "knex migrate:rollback",
     "migrate-latest": "knex migrate:latest",
     "seed": "knex seed:run",
-    "test": "jest"
+    "test": "jest",
+    "start": "node listen.js",
+    "migrate-and-start" : "npm run migrate-latest && npm start"
   },
   "keywords": [],
   "author": "",
